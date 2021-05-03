@@ -58,7 +58,7 @@ PWA_APP_LANG = 'en-US'
 SECRET_KEY = '^$q9l$g-0!+ifmkh*0yn96%d_l@nia!nzg^nmw4nin^(sl%^3*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 AUTH_USER_MODEL = 'accounts.User'
 ALLOWED_HOSTS = ['*']
 
