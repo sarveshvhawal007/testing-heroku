@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import django_on_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -122,8 +121,12 @@ WSGI_APPLICATION = 'blindRead.wsgi.application'
 # if os.getenv('GAE_APPLICATION', None):
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd97nq3bm3qj7te',
+        'HOST': 'ec2-34-230-115-172.compute-1.amazonaws.com',
+        'PORT':5432,
+        'USER': 'vgvquawyhvztea',
+        'PASSWORD': '40d726b12f2095ec12e38f056bc87f5ffa33ffde3ee4e04ace9edf21e81d1fe1'
     }
 }
 
@@ -177,6 +180,3 @@ LOGOUT_REDIRECT_URL = 'home'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
-
-
-django_on_heroku.settings(locals())
